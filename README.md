@@ -1,7 +1,11 @@
 # Dronester
 
-A python flask web app to play ambient drone.
+A Python Flask web app to play ambient drone.
 
 ## Dependencies
 
 [SoX](http://sox.sourceforge.net/)
+
+## Screenshot
+
+![screen shot](/screenshots/dronester.png?raw=true)

@@ -1,0 +1,43 @@
+body {
+    color: #212121;
+    font-family: "Helvetica Neue", "Calibri Light", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.02em;
+    padding: 0 36px;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.drone-form {
+    padding: 1rem;
+    border: solid #f7f7f9;
+    margin: 2rem 0;
+}
+
+#volume {
+    width: 100%;
+}
+
+.vol {
+    position: relative;
+    top: 4px;
+}
+
+.vol-up {
+    float: right;
+}
+
+button img {
+    position: relative;
+    top: -2px;
+    padding-left: 6px;
+}

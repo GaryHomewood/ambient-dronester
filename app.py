@@ -7,9 +7,10 @@ from flask import session
 import os
 import subprocess
 import signal
+import config
 
 app = Flask(__name__)
-app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+app.secret_key = config.app_secret_key
 
 @app.route("/")
 def index():

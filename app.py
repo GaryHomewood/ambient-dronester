@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 from flask import jsonify
 from flask import session
+from livereload import Server
 
 import os
 import platform
@@ -41,6 +42,10 @@ def play():
     pid = os.getpgid(proc.pid)
     session['pid'] = str(pid)
     return 'ok'
+
+@app.route("/present")
+def present():
+    return render_template("present.html")
 
 def setVolume(volume):
     setVolumeCmd = ''

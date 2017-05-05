@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>dronester</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/reveal.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/theme/white.css')}}">
+    <style type="text/css">
+    .reveal p {
+        font-family: 'Roboto', sans-serif;
+    }
+    .reveal .slides {
+        text-align: left;
+    }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+		<div class="slides">
+            <section>
+                <dl>
+                    <dt>SoX</dt>
+                    <dd>A cross platform command line utility for sound file manipulation.</dd>
+                </dl>
+                <pre style="margin-top:50px;"><code data-trim data-noescape class="bash">
+play $progress  -c 2  --null  synth  $len  ${noise}noise  \
+     band -n $center 499               \
+     tremolo $wave    43   reverb 19   \
+     bass -11              treble -1   \
+     vol     14dB                      \
+     repeat  $repeats
+                </code></pre>
+            </section>
+            <section>
+                <dl>
+                    <dt>Flask</dt>
+                    <dd>A Python microframework</dd>
+                </dl>
+            </section>
+		    <section>
+                <p class="fragment">CHIP</p>
+                <p class="fragment">Reveal.js</p>
+                <p class="fragment">CSound</p>
+            </section>
+		</div>
+	</div>
+    <script src="{{url_for('static', filename='js/head.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/reveal.js')}}"></script>
+    <script>
+        Reveal.initialize({
+            controls: false,
+            progress: false,
+            dependencies: [
+					{ src: "{{url_for('static', filename='plugin/highlight/highlight.js')}}", async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+        });
+    </script>
+</body>

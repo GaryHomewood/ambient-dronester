@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/reveal.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/theme/white.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/zenburn.css')}}">
     <style type="text/css">
     .reveal p {
         font-family: 'Roboto', sans-serif;
@@ -15,35 +16,63 @@
     .reveal .slides {
         text-align: left;
     }
+    .reveal section img {
+        border: none;
+        box-shadow: none;
+    }
     </style>
 </head>
 <body>
     <div class="reveal">
 		<div class="slides">
             <section>
-                <dl>
-                    <dt>SoX</dt>
-                    <dd>A cross platform command line utility for sound file manipulation.</dd>
-                </dl>
-                <pre style="margin-top:50px;"><code data-trim data-noescape class="bash">
-play $progress  -c 2  --null  synth  $len  ${noise}noise  \
-     band -n $center 499               \
-     tremolo $wave    43   reverb 19   \
-     bass -11              treble -1   \
-     vol     14dB                      \
-     repeat  $repeats
-                </code></pre>
+                <h1>Dronester</h1>
             </section>
+
             <section>
-                <dl>
-                    <dt>Flask</dt>
-                    <dd>A Python microframework</dd>
-                </dl>
+                <h2>SoX</h2>
+                <p>A cross platform command line utility for sound file manipulation.</p>
+<pre style="margin-top:50px;"><code class="bash">
+play $progress  -c 2  --null  synth  $len  ${noise}noise  \
+        band -n $center 499                \
+        tremolo $wave    43   reverb 19    \
+        bass -11              treble -1    \
+        vol     14dB                       \
+        repeat  $repeats
+
+</code></pre>
             </section>
-		    <section>
-                <p class="fragment">CHIP</p>
-                <p class="fragment">Reveal.js</p>
-                <p class="fragment">CSound</p>
+
+            <section>
+                <img src="{{url_for('static', filename='img/python-logo.png')}}" alt="Flask"/>
+                <p>A Python microframework</p>
+            </section>
+
+            <section>
+                <h2>CHIP</h2>
+                <img src="{{url_for('static', filename='img/chip.png')}}" alt="CHIP"/>
+            </section>
+
+            <section>
+                <img src="{{url_for('static', filename='img/dronester.png')}}" alt="Dronester"/>
+            </section>
+
+            <section>
+                <h2>Glitch!</h2>
+                <img src="{{url_for('static', filename='img/glitch.png')}}"/>
+            </section>
+
+            <section>
+                <img src="{{url_for('static', filename='img/csound.png')}}" alt="Csound"/>
+                <p>A sound and music computing system.</p>
+            </section>
+
+            <section>
+                <h2>Meta</h2>
+                <ul>
+                    <li>Reveal.js</li>
+                    <li><a href="https://github.com/GaryHomewood/ambient-dronester">github.com/GaryHomewood/ambient-dronester</a></li>
+                </ul>
             </section>
 		</div>
 	</div>
